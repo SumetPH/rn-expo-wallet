@@ -61,7 +61,7 @@ export default function TransactionList({ transactions, refetch }: Props) {
       )}
       renderItem={({ item }) => (
         <TouchableWithoutFeedback
-          onPress={() => router.navigate("SettingModal")}
+          onPress={() => router.navigate("TransactionFromModal")}
         >
           <View className="bg-white py-2 px-2 flex-row justify-between items-center">
             <View className="flex-row items-center">

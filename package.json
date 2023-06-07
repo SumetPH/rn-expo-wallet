@@ -10,6 +10,7 @@
     "build:android": "expo build:android -t apk"
   },
   "dependencies": {
+    "@react-native-community/datetimepicker": "6.7.3",
     "@react-navigation/bottom-tabs": "^6.5.7",
     "@react-navigation/drawer": "^6.6.2",
     "@react-navigation/native": "^6.1.6",
@@ -22,6 +23,7 @@
     "numeral": "^2.0.6",
     "react": "18.2.0",
     "react-native": "0.71.8",
+    "react-native-actions-sheet": "^0.8.29",
     "react-native-gesture-handler": "~2.9.0",
     "react-native-loading-spinner-overlay": "^3.0.1",
     "react-native-popover-view": "^5.1.7",

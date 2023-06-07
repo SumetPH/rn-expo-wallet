@@ -25,11 +25,13 @@ import ReactQuery from "./providers/ReactQuery";
 import { StatusBar } from "expo-status-bar";
 import Spinner from "react-native-loading-spinner-overlay/lib";
 import { useLoaderStore } from "./store/loaderStore";
+import TransactionFromModal from "./views/TransactionFromModal";
 
 export type AppStackParamList = {
   Root: undefined;
   InfoScreen: undefined;
   SettingModal: undefined;
+  TransactionFromModal: undefined;
 };
 const Stack = createStackNavigator<AppStackParamList>();
 
@@ -59,6 +61,10 @@ export default function App() {
           </Stack.Group>
           <Stack.Group screenOptions={{ presentation: "modal" }}>
             <Stack.Screen name="SettingModal" component={SettingScreen} />
+            <Stack.Screen
+              name="TransactionFromModal"
+              component={TransactionFromModal}
+            />
           </Stack.Group>
         </Stack.Navigator>
       </NavigationContainer>
