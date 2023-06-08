@@ -58,7 +58,9 @@ export default function TransactionFooter({
               <TouchableOpacity
                 onPress={() => {
                   setShowPopover(false);
-                  router.navigate("SettingModal");
+                  router.navigate("TransactionFromModal", {
+                    type: "income",
+                  });
                 }}
               >
                 <View className="py-3 px-6">
@@ -68,7 +70,9 @@ export default function TransactionFooter({
               <TouchableOpacity
                 onPress={() => {
                   setShowPopover(false);
-                  router.navigate("SettingModal");
+                  router.navigate("TransactionFromModal", {
+                    type: "expense",
+                  });
                 }}
               >
                 <View className="py-3 px-6">

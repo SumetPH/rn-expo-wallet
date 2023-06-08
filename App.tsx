@@ -31,7 +31,9 @@ export type AppStackParamList = {
   Root: undefined;
   InfoScreen: undefined;
   SettingModal: undefined;
-  TransactionFromModal: undefined;
+  TransactionFromModal: {
+    type: "income" | "expense";
+  };
 };
 const Stack = createStackNavigator<AppStackParamList>();
 
