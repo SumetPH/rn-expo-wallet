@@ -1,11 +1,4 @@
-import {
-  SafeAreaView,
-  SectionList,
-  Text,
-  TouchableOpacity,
-  TouchableWithoutFeedback,
-  View,
-} from "react-native";
+import { Text, View } from "react-native";
 import { DrawerScreenProps } from "@react-navigation/drawer";
 
 import { useNavigation } from "@react-navigation/native";
@@ -24,6 +17,7 @@ import { useLoaderStore } from "../store/loaderStore";
 
 import TransactionList from "../components/transaction/TransactionList";
 import TransactionFooter from "../components/transaction/TransactionFooter";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 type HomeProps = DrawerScreenProps<DrawerParamList, "HomeScreen">;
 

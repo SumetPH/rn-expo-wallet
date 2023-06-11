@@ -26,6 +26,7 @@ import { StatusBar } from "expo-status-bar";
 import Spinner from "react-native-loading-spinner-overlay/lib";
 import { useLoaderStore } from "./store/loaderStore";
 import TransactionFromModal from "./views/TransactionFromModal";
+import AccountSelectModal from "./views/AccountSelectModal";
 
 export type AppStackParamList = {
   Root: undefined;
@@ -34,6 +35,7 @@ export type AppStackParamList = {
   TransactionFromModal: {
     type: "income" | "expense";
   };
+  AccountSelectModal: undefined;
 };
 const Stack = createStackNavigator<AppStackParamList>();
 
@@ -43,7 +45,7 @@ export default function App() {
   return (
     <ReactQuery>
       <StatusBar style="light" />
-      <Spinner visible={loaderStore.loading} />
+      {/* <Spinner visible={loaderStore.loading} /> */}
 
       <NavigationContainer>
         <Stack.Navigator
@@ -66,6 +68,10 @@ export default function App() {
             <Stack.Screen
               name="TransactionFromModal"
               component={TransactionFromModal}
+            />
+            <Stack.Screen
+              name="AccountSelectModal"
+              component={AccountSelectModal}
             />
           </Stack.Group>
         </Stack.Navigator>

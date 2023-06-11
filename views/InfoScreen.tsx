@@ -1,15 +1,12 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-import { View, Text, SafeAreaView } from "react-native";
-import { AppStackParamList, DrawerParamList } from "../App";
-import { StackScreenProps } from "@react-navigation/stack";
-import { useNavigation } from "@react-navigation/native";
+import { View, Text } from "react-native";
 import {
-  DrawerNavigationProp,
   DrawerScreenProps,
   createDrawerNavigator,
 } from "@react-navigation/drawer";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export type TabTypeProps = {
   InfoTab1: undefined;
